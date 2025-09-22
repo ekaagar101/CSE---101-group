@@ -1,4 +1,5 @@
 Day 2 X Matrix solutions:
+PYTHON:
 class Solution(object):
     def checkXMatrix(self, grid):
         n = len(grid)
@@ -11,5 +12,26 @@ class Solution(object):
                     if grid[r][c] != 0:
                         return False
         return True
+JAVA:
+public class Solution {
+    public static boolean checkXMatrix(int[][] grid) {
+        int n = grid.length;
+        for (int r = 0; r < n; r++) {
+            for (int c = 0; c < n; c++) {
+                if (r == c || r + c == n - 1) {
+                    if (grid[r][c] == 0) {
+                        return false;
+                    }
+                } else {
+                    if (grid[r][c] != 0) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+}
+
                     
         
