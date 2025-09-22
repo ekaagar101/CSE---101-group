@@ -1,4 +1,5 @@
 PYTHON Challenge 1 Code
+
 class Solution(object):
     def addDigits(self, num):
         """
@@ -49,4 +50,34 @@ class Solution(object):
                     if grid[i][j] != 0:
                         return False
         return True
+
+JavaScript Challenge 2 Code
+
+/**
+ * @param {number[][]} grid
+ * @return {boolean}
+ */
+var checkXMatrix = function(grid) {
+        let n = grid.length;
+        for (let i = 0; i < n; i++){
+            for (let j = 0; j<n; j++){
+                if (i == j){
+                    if (grid[i][j] == 0){
+                        return false
+                    }
+                }
+                else if (i + j == n - 1){
+                    if (grid[i][j] == 0){
+                        return false
+                    }
+                }
+                else{
+                    if (grid[i][j] !== 0) {
+                        return false
+                    }
+                }
+            }
+        }
+    return true
+};
                       
