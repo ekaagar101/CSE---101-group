@@ -26,6 +26,7 @@ var addDigits = function(num) {
     }
     return num;
 };
+
 PYTHON Challenge 2 Code
 
 class Solution(object):
