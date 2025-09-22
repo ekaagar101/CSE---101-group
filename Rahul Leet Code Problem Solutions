@@ -1,3 +1,4 @@
+PYTHON Challenge 1 Code
 class Solution(object):
     def addDigits(self, num):
         """
@@ -11,3 +12,17 @@ class Solution(object):
                 num //= 10
             num = s 
         return num
+
+JAVASCRIPT Challenge 1 Code
+
+var addDigits = function(num) {
+    while (num >= 10){
+        let s = 0;
+        while (num > 0) {
+            s += num % 10
+            num = Math.floor(num/10);
+        }
+        num = s
+    }
+    return num;
+};
