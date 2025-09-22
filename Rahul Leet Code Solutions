@@ -1,0 +1,51 @@
+PYTHON Challenge 1 Code
+class Solution(object):
+    def addDigits(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+        while num >= 10:
+            s = 0
+            while num > 0:
+                s += num % 10
+                num //= 10
+            num = s 
+        return num
+
+JAVASCRIPT Challenge 1 Code
+
+var addDigits = function(num) {
+    while (num >= 10){
+        let s = 0;
+        while (num > 0) {
+            s += num % 10
+            num = Math.floor(num/10);
+        }
+        num = s
+    }
+    return num;
+};
+PYTHON Challenge 2 Code
+
+class Solution(object):
+    def checkXMatrix(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: bool
+        """
+        n = len(grid)
+        
+        for i in range(n):
+            for j in range(n): 
+                if (i == j):
+                    if (grid[i][j] == 0):
+                        return False       
+                elif (i + j == n - 1):
+                    if (grid[i][j] == 0):
+                        return False
+                else: 
+                    if grid[i][j] != 0:
+                        return False
+        return True
+                      
