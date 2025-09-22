@@ -52,3 +52,17 @@ public:
         return true;
     }
 };
+
+
+class Solution(object):
+    def checkXMatrix(self, grid):
+        n = len(grid)
+        for k in range(n):
+            for i in range(n):
+                if k == i or k+i == n-1:
+                    if grid[k][i] == 0:
+                        return False
+                else:
+                    if grid[k][i] != 0:
+                        return False
+        return True
